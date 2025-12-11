@@ -1,0 +1,132 @@
+# Core Python (usually pre-installed)
+# Python 3.8+
+
+# Development Tools
+black>=22.0.0          # Code formatting
+flake8>=4.0.0          # Linting
+mypy>=0.991            # Type checking
+pytest>=7.0.0          # Testing framework
+pytest-cov>=4.0.0      # Test coverage
+pytest-mock>=3.10.0    # Mocking for tests
+
+# Interactive Development
+jupyter>=1.0.0         # Jupyter notebooks
+ipython>=8.0.0         # Enhanced Python REPL
+pdbpp>=0.10.0          # Enhanced debugger
+
+# Documentation
+sphinx>=5.0.0          # Documentation generator
+mkdocs>=1.4.0          # Markdown documentation
+
+# Web Frameworks
+flask>=2.2.0           # Lightweight web framework
+django>=4.1.0          # Full-featured web framework
+fastapi>=0.88.0        # Modern API framework
+uvicorn>=0.20.0        # ASGI server for FastAPI
+
+# Data Science & ML
+pandas>=1.5.0          # Data manipulation
+numpy>=1.21.0          # Numerical computing
+matplotlib>=3.6.0      # Data visualization
+seaborn>=0.12.0        # Statistical visualization
+scikit-learn>=1.2.0    # Machine learning
+tensorflow>=2.11.0     # Deep learning (CPU version)
+torch>=1.13.0          # PyTorch
+xgboost>=1.7.0         # Gradient boosting
+
+# Web Scraping
+beautifulsoup4>=4.11.0 # HTML parsing
+selenium>=4.7.0        # Browser automation
+scrapy>=2.7.0          # Web scraping framework
+requests>=2.28.0       # HTTP library
+
+# Database
+sqlalchemy>=1.4.0      # ORM
+psycopg2-binary>=2.9.0 # PostgreSQL driver
+pymysql>=1.0.0         # MySQL driver
+sqlite3                # Built-in SQLite support
+
+# Async Programming
+aiohttp>=3.8.0         # Async HTTP client/server
+httpx>=0.24.0          # Modern async HTTP client
+
+# Utilities
+click>=8.1.0           # Command line interfaces
+rich>=13.0.0           # Rich text and beautiful formatting
+tqdm>=4.64.0           # Progress bars
+python-dotenv>=0.21.0  # Environment variables
+
+# Security & Quality
+bandit>=1.7.0          # Security linting
+safety>=2.3.0          # Security vulnerability checking
+
+# Package Management
+pipenv>=2022.11.0      # Virtual environment management
+poetry>=1.3.0          # Modern dependency management
+
+# Performance & Profiling
+memory-profiler>=0.61.0 # Memory profiling
+line-profiler>=4.0.0   # Line-by-line profiling
+cProfile              # Built-in profiling (Python standard library)
+
+# Type Hints & Annotations
+typing-extensions>=4.4.0 # Enhanced typing support
+
+# Logging & Monitoring
+structlog>=22.1.0      # Structured logging
+sentry-sdk>=1.12.0     # Error monitoring
+
+# Deployment & DevOps
+docker>=6.0.0          # Docker Python client
+kubernetes>=25.0.0     # Kubernetes client
+boto3>=1.26.0          # AWS SDK
+google-cloud-storage>=2.7.0 # Google Cloud Storage
+azure-storage-blob>=12.14.0 # Azure Storage
+
+# API Development
+pydantic>=1.10.0       # Data validation
+graphene>=3.1.0        # GraphQL framework
+strawberry-graphql>=0.152.0 # Modern GraphQL
+
+# Task Automation
+celery>=5.3.0          # Distributed task queue
+redis>=4.4.0           # Redis client
+schedule>=1.2.0        # Job scheduling
+
+# Image Processing
+pillow>=9.3.0          # Image processing
+opencv-python>=4.7.0   # Computer vision
+
+# Natural Language Processing
+nltk>=3.8.0            # NLP toolkit
+spacy>=3.5.0           # Industrial-strength NLP
+transformers>=4.21.0   # Hugging Face transformers
+
+# Time Series & Forecasting
+prophet>=1.1.0         # Time series forecasting
+statsmodels>=0.13.0    # Statistical modeling
+
+# Web Development Extras
+jinja2>=3.1.0          # Templating engine
+wtforms>=3.0.0         # Form handling
+flask-sqlalchemy>=3.0.0 # Flask SQLAlchemy integration
+django-rest-framework>=3.14.0 # Django REST framework
+
+# Data Visualization
+plotly>=5.11.0         # Interactive plots
+streamlit>=1.16.0      # Data apps
+dash>=2.7.0            # Web-based dashboards
+
+# Testing Extras
+faker>=15.0.0          # Fake data generation
+factory-boy>=3.2.0     # Test data factories
+responses>=0.23.0      # Mock HTTP responses
+
+# Development Tools
+pre-commit>=3.0.0      # Git hooks
+commitizen>=2.42.0     # Conventional commits
+coverage>=7.0.0        # Code coverage
+
+# Note: Some packages may have different installation requirements
+# For GPU support with TensorFlow/PyTorch, install specific versions
+# For production deployments, consider using pip-tools or poetry for lock files
