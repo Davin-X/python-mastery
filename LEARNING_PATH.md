@@ -2,13 +2,21 @@
 
 ## Overview
 
-This 16-week comprehensive learning path will take you from Python beginner to expert. Each week includes:
+This 18-week comprehensive learning path will take you from Python beginner to machine learning expert. Each week includes:
 
 - **📚 Theory**: Core concepts and explanations
 - **💻 Practice**: Hands-on coding exercises
 - **🛠️ Tools**: Essential tools and libraries
 - **🎯 Projects**: Real-world applications
 - **📝 Assessment**: Quizzes and challenges
+
+### 🎯 Learning Outcomes
+- **Weeks 1-4**: Python fundamentals and OOP
+- **Weeks 5-8**: Advanced Python features
+- **Weeks 9-12**: Expert-level concepts and patterns
+- **Weeks 13-15**: Data analysis and visualization
+- **Weeks 16-17**: Machine learning and statistics
+- **Week 18**: Interview preparation and projects
 
 ---
 
