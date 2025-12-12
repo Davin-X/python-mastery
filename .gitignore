@@ -175,3 +175,26 @@ logs/
 *.tmp
 *.temp
 .cache/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# IDE files
+.idea/
+*.iml
+.vscode/settings.json
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
