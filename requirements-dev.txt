@@ -1,0 +1,22 @@
+# Development / QA tooling — not required to run the notebooks.
+# Install with: pip install -r requirements-dev.txt
+-r requirements.txt
+
+# Formatting & linting
+black
+ruff
+
+# Static typing
+mypy
+
+# Testing & coverage
+pytest
+pytest-cov
+coverage
+unittest2
+
+# Notebook tooling & validation
+nbformat
+nbconvert
+nbstripout
+pre-commit

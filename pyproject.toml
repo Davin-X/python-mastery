@@ -1,0 +1,27 @@
+# Tool configuration for the python-mastery repository.
+# This is NOT a Python package: it only configures linting, formatting, and testing.
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = ["scripts", "examples", "problems"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = ["E501"]
+
+[tool.black]
+line-length = 100
+target-version = ["py312"]
+
+[tool.pytest.ini_options]
+testpaths = ["problems", "tests"]
+addopts = "-q"
+
+[tool.coverage.run]
+branch = true
+source = ["examples", "problems"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true

@@ -1,0 +1,56 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    name: Validate notebooks & repo hygiene
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install validation tooling
+        run: pip install nbformat nbconvert ruff
+
+      - name: Validate notebook structure
+        run: python scripts/validate_notebooks.py
+
+      - name: Repo hygiene gate
+        run: bash scripts/audit_repo.sh
+
+      - name: Lint Python sources
+        run: ruff check scripts examples problems
+
+  execute:
+    name: Execute notebooks (informational)
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install runtime dependencies
+        run: pip install -r requirements.txt
+
+      - name: Execute all notebooks
+        run: |
+          mkdir -p /tmp/executed
+          jupyter nbconvert --to notebook --execute \
+            --ExecutePreprocessor.timeout=300 \
+            --output-dir /tmp/executed \
+            notebooks/fundamentals/*.ipynb \
+            notebooks/intermediate/*.ipynb \
+            notebooks/advanced/*.ipynb \
+            notebooks/data_science/*.ipynb \
+            references/interview-prep/*.ipynb
