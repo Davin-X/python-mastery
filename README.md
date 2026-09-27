@@ -68,15 +68,16 @@ python-mastery/
 │   ├── 1-fundamentals/  01-04
 │   ├── 2-intermediate/  05-08
 │   ├── 3-advanced/      09-12
-│   └── 4-data_science/  14-18
+│   ├── 4-data_science/  14-18
+│   └── 0-archive/             # legacy monolith from tech-notes — not part of the path
 ├── references/                # lookup & study material; start at references/README.md
-│   ├── cheatsheets/           # syntax · data structures · algorithms · testing · pandas
+│   ├── cheatsheets/           # syntax · essentials · data structures · algorithms · testing · pandas
 │   ├── guides/                # decorators · automation & DevOps
 │   └── interview-prep/        # 14 concept Q&A + 10 coding prompts
 ├── practice/                  # hands-on work
 │   ├── solutions/             # five phase-level answer files
 │   ├── problems/              # question + starter + solution
-│   ├── projects/              # the 14 weekly deliverable specs
+│   ├── projects/              # the 14 weekly deliverable specs + starter-project ideas
 │   └── data/                  # sample dataset (synthetic)
 ├── scripts/                   # validate_notebooks · audit_repo · strip_pip_installs
 ├── docs/                      # CONTRIBUTING · CHANGELOG · SECURITY · CoC

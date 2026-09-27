@@ -1,6 +1,7 @@
 # Python Syntax Quick Reference
 
 Companion to `notebooks/1-fundamentals/01_python_basics.ipynb`.
+See also `python_essentials.md` (standalone handout migrated from tech-notes).
 
 ## Variables, types, operators
 

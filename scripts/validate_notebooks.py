@@ -55,7 +55,11 @@ EXPECTED: dict[str, list[str]] = {
 
 
 def all_notebooks() -> list[Path]:
-    paths = sorted(ROOT.glob("notebooks/**/*.ipynb"))
+    paths = sorted(
+        p
+        for p in ROOT.glob("notebooks/**/*.ipynb")
+        if "0-archive" not in p.parts
+    )
     paths += sorted((ROOT / "references" / "interview-prep").glob("*.ipynb"))
     return paths
 
