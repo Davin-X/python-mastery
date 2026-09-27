@@ -1,9 +1,19 @@
-# Solutions
+# Notebook Solutions
 
-Per-notebook exercise **solutions** will land here, one folder per notebook
-(`01_python_basics`, …, `18_statistics_probability`).
+The notebook prompts stay unanswered in the learning material. This directory
+contains five runnable reference files, one for each curriculum phase and one
+for interview prep, avoiding both per-notebook clutter and a single oversized
+answer key.
 
-Empty on purpose for now: notebooks are gaining a standardized **Exercises**
-section, and solutions ship alongside each one. Until then, get hands-on with
-`practice/problems/` (each problem has a question, a starter file, and a
-reference solution).
+Each file implements its phase's prompts and provides a small `_check()` runner:
+
+```bash
+python practice/solutions/foundations.py
+python practice/solutions/intermediate.py
+python practice/solutions/advanced.py
+python practice/solutions/data_science.py
+python practice/solutions/interview.py
+```
+
+Use the solutions only after attempting the prompts. The short standalone
+problems keep their own `solution.py` beside the prompt in `practice/problems/`.

@@ -1,6 +1,6 @@
 # Data Structures Quick Reference
 
-Companion to `notebooks/fundamentals/02_data_structures.ipynb`.
+Companion to `notebooks/1-fundamentals/02_data_structures.ipynb`.
 
 ## The big four
 
@@ -8,7 +8,7 @@ Companion to `notebooks/fundamentals/02_data_structures.ipynb`.
 |------|---------|---------|------------|----------|
 | `list` | ✅ | ✅ | ✅ | sequences, stacks, queues |
 | `tuple` | ✅ | ❌ | ✅ | fixed records, dict keys |
-| `dict` | ✅ (3.7+) | ✅ | keys unique | key → value lookups |
+| `dict` | insertion-ordered (guaranteed since 3.7) | ✅ | keys unique | key → value lookups |
 | `set` | ❌ | ✅ | ❌ | membership, de-duplication, set math |
 
 ## Lists
@@ -20,9 +20,16 @@ xs.insert(0, 0)         # insert at index
 xs.extend([5, 6])       # merge
 x = xs.pop()            # remove + return last; pop(0) for first
 xs.remove(1)            # remove by value
-xs.sort() / sorted(xs)  # in-place / new list
-xs[::-1]  xs[1:3]  xs[::2]      # reverse / slice / stride
-len(xs)  xs.count(1)  xs.index(3)  any(...)  all(...)
+xs.sort()               # in-place
+sorted_xs = sorted(xs)  # new list
+xs[::-1]                # reversed copy
+xs[1:3]                 # slice
+xs[::2]                 # stride
+len(xs)
+xs.count(1)
+xs.index(3)
+any(xs)
+all(xs)
 ```
 
 ## Tuples
@@ -31,6 +38,7 @@ len(xs)  xs.count(1)  xs.index(3)  any(...)  all(...)
 point = (3, 4)
 x, y = point                    # unpacking
 lat, lon = (12.9, 77.6)
+# A tuple is hashable only when all of its elements are hashable.
 ```
 
 ## Dictionaries
@@ -41,9 +49,11 @@ d["b"] = 2
 d.get("c", 0)                   # 0 (no KeyError)
 d.setdefault("d", 4)            # write only if absent
 d.update({"e": 5})
-for k, v in d.items(): ...
-{k: v for k, v in d.items() if v > 1}
-d.pop("a", None)  del d["b"]
+for key, value in d.items():
+	print(key, value)
+filtered = {key: value for key, value in d.items() if value > 1}
+d.pop("a", None)
+del d["b"]
 ```
 
 ## Sets
@@ -62,13 +72,15 @@ a ^ b            # symmetric difference
 ```python
 from collections import Counter, defaultdict, deque, namedtuple
 
-Counter("aabbc")                    # {'a':2, 'b':2, 'c':1}
-c.most_common(1)                    # [('a', 2)]
+counts = Counter("aabbc")          # Counter({'a': 2, 'b': 2, 'c': 1})
+counts.most_common(1)               # [('a', 2)]
 
-defaultdict(list)["missing"]        # returns [] instead of KeyError
+groups = defaultdict(list)
+groups["missing"]                   # returns [] instead of KeyError
 
 dq = deque([1, 2, 3])               # O(1) append/popleft on both ends
-dq.appendleft(0)  dq.pop()
+dq.appendleft(0)
+dq.pop()
 
 Point = namedtuple("Point", ["x", "y"])   # tuple with field names
 ```
@@ -77,7 +89,8 @@ Point = namedtuple("Point", ["x", "y"])   # tuple with field names
 
 | Operation | Cost |
 |-----------|------|
-| list index / append / pop | O(1) |
+| list index / append / pop last | O(1) (append is amortized) |
+| list insert / pop at the front | O(n) |
 | list `in` (search) | O(n) |
 | sort / sorted | O(n log n) |
 | dict / set get, set, in | O(1) average |

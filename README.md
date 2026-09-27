@@ -29,7 +29,8 @@ interview primer. Built to be completed in order at ~8-10 h/week.
 
 Syllabus with theory/practice/assessment per week →
 [`LEARNING_PATH.md`](LEARNING_PATH.md). Week & deliverable specs →
-[`practice/projects/README.md`](practice/projects/README.md).
+[`practice/projects/README.md`](practice/projects/README.md). Practice index →
+[`practice/README.md`](practice/README.md).
 
 ## 🧭 Contents — notebooks
 
@@ -53,25 +54,27 @@ Syllabus with theory/practice/assessment per week →
 | `17_machine_learning_basics` | 14 | Data Science | regression, classification, clustering |
 | `18_statistics_probability` | 14 | Data Science | distributions, hypothesis testing |
 
-> Notebooks live in `notebooks/{fundamentals,intermediate,advanced,data_science}/`.
+> Curriculum notebooks live in `notebooks/{1-fundamentals,2-intermediate,3-advanced,4-data_science}/`.
 > There is no `13_*.ipynb` — the old 13 (web development) was removed; the
 > data-science notebooks keep their original numbers.
-> Interview primer: `references/interview-prep/interview_questions_mastery.ipynb`.
+> The curriculum contains 41 function-writing prompts; the interview primer
+> adds 10 more: `references/interview-prep/interview_questions_mastery.ipynb`.
 
 ## 📁 Structure
 
 ```
 python-mastery/
 ├── notebooks/                 # the 14-week curriculum (18 notebooks)
-│   ├── fundamentals/  01-04
-│   ├── intermediate/  05-08
-│   ├── advanced/      09-12
-│   └── data_science/  14-18
-├── references/                # lookup & study material
-│   ├── cheatsheets/           # python · data-structures · pandas
+│   ├── 1-fundamentals/  01-04
+│   ├── 2-intermediate/  05-08
+│   ├── 3-advanced/      09-12
+│   └── 4-data_science/  14-18
+├── references/                # lookup & study material; start at references/README.md
+│   ├── cheatsheets/           # syntax · data structures · algorithms · testing · pandas
 │   ├── guides/                # decorators · automation & DevOps
-│   └── interview-prep/        # 14-Q&A primer notebook + README
+│   └── interview-prep/        # 14 concept Q&A + 10 coding prompts
 ├── practice/                  # hands-on work
+│   ├── solutions/             # five phase-level answer files
 │   ├── problems/              # question + starter + solution
 │   ├── projects/              # the 14 weekly deliverable specs
 │   └── data/                  # sample dataset (synthetic)
@@ -98,7 +101,7 @@ pip install -r requirements.txt  # + requirements-dev.txt for tooling
 
 # 4. Start learning
 jupyter lab
-# open notebooks/fundamentals/01_python_basics.ipynb
+# open notebooks/1-fundamentals/01_python_basics.ipynb
 ```
 
 ## ✅ What you'll learn

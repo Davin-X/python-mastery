@@ -1,6 +1,6 @@
 # pandas Quick Reference
 
-Companion to `notebooks/data_science/14_data_analysis_with_pandas.ipynb`.
+Companion to `notebooks/4-data_science/14_data_analysis_with_pandas.ipynb`.
 
 ## Core objects
 
@@ -55,7 +55,7 @@ df.drop_duplicates(subset=["name"])
 df.groupby("name")["age"].agg(["count", "mean", "std"])
 df.groupby("name")["age"].mean().reset_index()   # group keys back as a column
 df.pivot_table(values="age", index="name", aggfunc="mean")
-df["age"].value_counts() / .value_counts(normalize=True)
+df["age"].value_counts(normalize=True)  # proportions that sum to 1
 ```
 
 ## Combining tables

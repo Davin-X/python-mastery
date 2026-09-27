@@ -1,6 +1,6 @@
 # Python Syntax Quick Reference
 
-Companion to `notebooks/fundamentals/01_python_basics.ipynb`.
+Companion to `notebooks/1-fundamentals/01_python_basics.ipynb`.
 
 ## Variables, types, operators
 
@@ -25,7 +25,9 @@ s = "hello"
 s.upper()               # "HELLO"
 s.split("e")            # ['h', '', 'llo']
 "|".join(["a", "b"])    # "a|b"
-s.strip()  s.startswith("h")  s.replace("l", "L")
+s.strip()
+s.startswith("h")
+s.replace("l", "L")
 f"{s!r}"                # repr; f"{value:,.2f}" formats numbers
 ```
 
@@ -59,7 +61,7 @@ def greet(name: str, *, formal: bool = False) -> str:
 
 greet("Alice")                 # positional
 greet("Bob", formal=True)      # keyword-only after *
-lambda x, y: x + y             # anonymous
+add = lambda x, y: x + y       # anonymous; prefer def for named functions
 ```
 
 ## Comprehensions

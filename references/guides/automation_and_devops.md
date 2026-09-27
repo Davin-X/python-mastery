@@ -43,6 +43,13 @@ def category_of(path: Path) -> str:
 
 
 def organize(source: Path, dest: Path, by_date: bool) -> int:
+    source = source.resolve()
+    dest = dest.resolve()
+    if not source.is_dir():
+        raise NotADirectoryError(source)
+    if source == dest or source in dest.parents:
+        raise ValueError("destination must be outside the source directory")
+
     dest.mkdir(parents=True, exist_ok=True)
     moved = 0
     for file_path in source.rglob("*"):

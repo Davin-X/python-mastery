@@ -25,25 +25,25 @@ PIP_SUBPROCESS = re.compile(r"subprocess\.(check_call|call|run|Popen)\([^)]*['\"
 
 # Authoritative notebook layout — keep in sync with the README index.
 EXPECTED: dict[str, list[str]] = {
-    "notebooks/fundamentals": [
+    "notebooks/1-fundamentals": [
         "01_python_basics",
         "02_data_structures",
         "03_control_flow",
         "04_oop_fundamentals",
     ],
-    "notebooks/intermediate": [
+    "notebooks/2-intermediate": [
         "05_file_handling",
         "06_modules_packages",
         "07_error_handling",
         "08_testing",
     ],
-    "notebooks/advanced": [
+    "notebooks/3-advanced": [
         "09_metaclasses",
         "10_async_programming",
         "11_design_patterns",
         "12_performance_optimization",
     ],
-    "notebooks/data_science": [
+    "notebooks/4-data_science": [
         "14_data_analysis_with_pandas",
         "15_numpy_numerical_computing",
         "16_data_visualization_matplotlib",
@@ -64,9 +64,7 @@ def check_layout(failures: list[str]) -> None:
     for folder, expected in EXPECTED.items():
         actual = sorted(p.stem for p in (ROOT / folder).glob("*.ipynb"))
         if actual != expected:
-            failures.append(
-                f"{folder}/: expected {expected}, found {actual}"
-            )
+            failures.append(f"{folder}/: expected {expected}, found {actual}")
 
 
 def main() -> int:

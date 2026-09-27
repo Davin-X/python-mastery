@@ -62,7 +62,7 @@ project. Work the **notebook** for each week, then build the weekly
 
 ### Week 1 — Python Basics
 
-**Notebook:** `notebooks/fundamentals/01_python_basics.ipynb` · **8-10 h**
+**Notebook:** `notebooks/1-fundamentals/01_python_basics.ipynb` · **8-10 h**
 
 **Theory**
 - Running Python: REPL, scripts, Jupyter
@@ -86,7 +86,7 @@ until the user quits. Test with edge cases (divide by zero, non-numeric input).
 
 ### Week 2 — Data Structures
 
-**Notebook:** `notebooks/fundamentals/02_data_structures.ipynb` · **8-10 h**
+**Notebook:** `notebooks/1-fundamentals/02_data_structures.ipynb` · **8-10 h**
 
 **Theory**
 - `list`, `tuple`, `dict`, `set`: construction, indexing, slicing, methods
@@ -107,7 +107,7 @@ file will come in week 5.
 
 ### Week 3 — Control Flow & Functions
 
-**Notebook:** `notebooks/fundamentals/03_control_flow.ipynb` · **8-10 h**
+**Notebook:** `notebooks/1-fundamentals/03_control_flow.ipynb` · **8-10 h**
 
 **Theory**
 - `if`/`elif`/`else`, truthiness, short-circuiting
@@ -127,7 +127,7 @@ rooms as dicts/functions. Replayable loop.
 
 ### Week 4 — OOP Fundamentals
 
-**Notebook:** `notebooks/fundamentals/04_oop_fundamentals.ipynb` · **8-10 h**
+**Notebook:** `notebooks/1-fundamentals/04_oop_fundamentals.ipynb` · **8-10 h**
 
 **Theory**
 - Classes, instances, `__init__`, class vs instance attributes
@@ -153,7 +153,7 @@ overdraft limits. Unit-testable design.
 
 ### Week 5 — File I/O & Modules
 
-**Notebook:** `notebooks/intermediate/05_file_handling.ipynb` · **6-8 h**
+**Notebook:** `notebooks/2-intermediate/05_file_handling.ipynb` · **6-8 h**
 
 **Theory**
 - Reading/writing text & binary files; encoding
@@ -174,7 +174,7 @@ level, error rate, busiest hour; export a summary to CSV. Uses week 2-4 skills.
 
 ### Week 6 — Packages & Virtual Environments
 
-**Notebook:** `notebooks/intermediate/06_modules_packages.ipynb` · **6-8 h**
+**Notebook:** `notebooks/2-intermediate/06_modules_packages.ipynb` · **6-8 h**
 
 **Theory**
 - `import` mechanics, modules vs packages, `__init__.py`
@@ -195,7 +195,7 @@ Convert your week 5 Log Analyzer into a package with a CLI entry point
 
 ### Week 7 — Error Handling & Logging
 
-**Notebook:** `notebooks/intermediate/07_error_handling.ipynb` · **6-8 h**
+**Notebook:** `notebooks/2-intermediate/07_error_handling.ipynb` · **6-8 h**
 
 **Theory**
 - Exception hierarchy, raising and chaining (`raise ... from ...`)
@@ -214,7 +214,7 @@ context, skip gracefully, continue the batch, and summarize outcomes.
 
 ### Week 8 — Testing (pytest / TDD)
 
-**Notebook:** `notebooks/intermediate/08_testing.ipynb` · **8-10 h**
+**Notebook:** `notebooks/2-intermediate/08_testing.ipynb` · **8-10 h**
 
 **Theory**
 - `unittest` and `pytest` fundamentals; fixtures and parametrize
@@ -239,7 +239,7 @@ mocked I/O, and a coverage report ≥ 90%.
 
 ### Week 9 — Metaclasses & Descriptors
 
-**Notebook:** `notebooks/advanced/09_metaclasses.ipynb` · **6-8 h**
+**Notebook:** `notebooks/3-advanced/09_metaclasses.ipynb` · **6-8 h**
 
 **Theory**
 - Classes as objects; `type()` as the default metaclass
@@ -259,7 +259,7 @@ descriptors + an optional metaclass that registers models.
 
 ### Week 10 — Async Programming
 
-**Notebook:** `notebooks/advanced/10_async_programming.ipynb` · **8-10 h**
+**Notebook:** `notebooks/3-advanced/10_async_programming.ipynb` · **8-10 h**
 
 **Theory**
 - The event loop; coroutines vs threads; `async`/`await`
@@ -278,7 +278,7 @@ and save with `aiofiles`; handle retries and timeouts.
 
 ### Week 11 — Design Patterns
 
-**Notebook:** `notebooks/advanced/11_design_patterns.ipynb` · **8-10 h**
+**Notebook:** `notebooks/3-advanced/11_design_patterns.ipynb` · **8-10 h**
 
 **Theory**
 - Creational: singleton, factory, builder, prototype
@@ -296,7 +296,7 @@ each exposing a common interface; a CLI that lists/executes plugins.
 
 ### Week 12 — Performance Optimization
 
-**Notebook:** `notebooks/advanced/12_performance_optimization.ipynb` · **6-8 h**
+**Notebook:** `notebooks/3-advanced/12_performance_optimization.ipynb` · **6-8 h**
 
 **Theory**
 - Measuring first: `timeit`, `cProfile`, `memory-profiler`, line-profiler
@@ -320,7 +320,7 @@ complexity notes.
 
 ### Week 13 — Data Analysis (Pandas & NumPy)
 
-**Notebooks:** `14_data_analysis_with_pandas.ipynb`, `15_numpy_numerical_computing.ipynb` · **10-12 h**
+**Notebooks:** `notebooks/4-data_science/14_data_analysis_with_pandas.ipynb`, `notebooks/4-data_science/15_numpy_numerical_computing.ipynb` · **10-12 h**
 
 **Theory**
 - NumPy: `ndarray`, broadcasting, vectorized ops, ufuncs, linear algebra
@@ -341,7 +341,7 @@ markdown narrative.
 
 ### Week 14 — ML & Statistics
 
-**Notebooks:** `16_data_visualization_matplotlib.ipynb`, `17_machine_learning_basics.ipynb`, `18_statistics_probability.ipynb` · **12-15 h**
+**Notebooks:** `notebooks/4-data_science/16_data_visualization_matplotlib.ipynb`, `notebooks/4-data_science/17_machine_learning_basics.ipynb`, `notebooks/4-data_science/18_statistics_probability.ipynb` · **12-15 h**
 
 **Theory**
 - Visualization with Matplotlib: line/bar/scatter/heatmap, subplots, annotations

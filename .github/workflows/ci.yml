@@ -27,7 +27,7 @@ jobs:
         run: bash scripts/audit_repo.sh
 
       - name: Lint Python sources
-        run: ruff check scripts examples problems
+        run: ruff check scripts practice/problems practice/solutions
 
   execute:
     name: Execute notebooks (informational)
@@ -49,8 +49,8 @@ jobs:
           jupyter nbconvert --to notebook --execute \
             --ExecutePreprocessor.timeout=300 \
             --output-dir /tmp/executed \
-            notebooks/fundamentals/*.ipynb \
-            notebooks/intermediate/*.ipynb \
-            notebooks/advanced/*.ipynb \
-            notebooks/data_science/*.ipynb \
+            notebooks/1-fundamentals/*.ipynb \
+            notebooks/2-intermediate/*.ipynb \
+            notebooks/3-advanced/*.ipynb \
+            notebooks/4-data_science/*.ipynb \
             references/interview-prep/*.ipynb

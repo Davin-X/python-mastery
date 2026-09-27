@@ -4,23 +4,26 @@
 [tool.ruff]
 line-length = 100
 target-version = "py312"
-src = ["scripts", "examples", "problems"]
+src = ["scripts", "practice/problems", "practice/solutions"]
 
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "B", "UP"]
-ignore = ["E501"]
+ignore = [
+  "E501", # line length is enforced by black, not ruff
+  "B905", # zip() strict= needs 3.10+; practice code supports 3.10's default (equal
+  # lengths are pre-validated where it matters, e.g. binary_metrics)
+  "UP047", # PEP 695 type-parameter syntax needs 3.12+; TypeVar form keeps 3.10 compat
+]
 
 [tool.black]
 line-length = 100
 target-version = ["py312"]
 
 [tool.pytest.ini_options]
-testpaths = ["problems", "tests"]
 addopts = "-q"
 
 [tool.coverage.run]
 branch = true
-source = ["examples", "problems"]
 
 [tool.coverage.report]
 show_missing = true
